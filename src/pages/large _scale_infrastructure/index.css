@@ -1,0 +1,560 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.container {
+  overflow: hidden;
+  position: relative;
+}
+
+.image-bgs {
+  position: relative;
+}
+
+.image-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.image-mask img{
+  height: 100%;
+}
+.fade-image-bg .fade-image-01 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/01.jpg);
+}
+.fade-image-bg .fade-image-02 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/11.jpg);
+}
+.fade-image-bg .fade-image-03 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/10.jpg);
+}
+.fade-image-bg .fade-image-04 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/04.jpg);
+}
+.fade-image-bg .fade-image-05 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/05.jpg);
+}
+.fade-image-bg .fade-image-06 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/06.jpg);
+}
+.fade-image-bg .fade-image-07 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/07.jpg);
+}
+.fade-image-bg .fade-image-08 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/08.jpg);
+}
+.fade-image-bg .fade-image-09 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/09.jpg);
+}
+.fade-image-bg .fade-image-10 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/10.jpg);
+}
+.fade-image-bg .fade-image-11 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/11.jpg);
+}
+.fade-image-bg .fade-image-12 {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/12.jpg);
+}
+
+.china-map {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.china-map img {
+  width: 50%;
+}
+
+.address-map {
+  position: absolute;
+  right: 75px;
+  top: 50px;
+  z-index: 10000;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: didot;
+}
+.address-map::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+.address-map li {
+  margin-bottom: 40px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 10px;
+  color: #9f8b78;
+}
+.address-map li.active {
+  color: #542b05;
+}
+.address-map li.active:after {
+  display: block;
+  content: "";
+  width: 4px;
+  height: 20px;
+  background: #aa5754;
+  position: absolute;
+  z-index: 9999;
+  left: 0px;
+  top: 50%;
+  margin-top: -10px;
+  border-radius: 10px;
+}
+.address-map li > div:nth-child(1) {
+  font-size: 20px;
+}
+.address-map li > div:nth-child(2) {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.mouse-pointer {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.mouse-pointer img {
+  width: 50%;
+}
+
+.circle1 {
+  position: absolute;
+  top: 60px;
+  left: 200px;
+}
+
+.circle2 {
+  position: absolute;
+  top: 100px;
+  left: -100px;
+}
+
+.circle3 {
+  position: absolute;
+  top: 100px;
+  left: -100px;
+}
+
+.circle3 {
+  position: absolute;
+  top: 160px;
+  left: 70px;
+}
+
+.circle4 {
+  position: absolute;
+  top: 70px;
+  left: 0px;
+}
+
+.circle5 {
+  position: absolute;
+  top: 250px;
+  left: 100px;
+}
+
+.circle6 {
+  position: absolute;
+  top: 238px;
+  left: 140px;
+}
+
+.circle7 {
+  position: absolute;
+  top: 270px;
+  left: 120px;
+}
+
+.circle20 {
+  position: absolute;
+  top: 313px;
+  left: 140px;
+}
+
+.circle8 {
+  position: absolute;
+  top: 260px;
+  left: 160px;
+}
+
+.circle9 {
+  position: absolute;
+  top: 240px;
+  left: 190px;
+}
+
+.circle10 {
+  position: absolute;
+  top: 240px;
+  left: 230px;
+}
+
+.circle11 {
+  position: absolute;
+  bottom: 180px;
+  left: 230px;
+}
+
+.circle12 {
+  position: absolute;
+  bottom: 170px;
+  left: 200px;
+}
+
+.circle13 {
+  position: absolute;
+  bottom: 200px;
+  left: 190px;
+}
+
+.circle14 {
+  position: absolute;
+  bottom: 240px;
+  left: 210px;
+}
+
+.circle15 {
+  position: absolute;
+  bottom: 270px;
+  left: 230px;
+}
+
+.circle16 {
+  position: absolute;
+  bottom: 300px;
+  left: 260px;
+}
+
+.circle17 {
+  position: absolute;
+  bottom: 400px;
+  left: 300px;
+}
+
+.circle18 {
+  position: absolute;
+  bottom: 300px;
+  left: 320px;
+}
+
+.circle19 {
+  position: absolute;
+  top: 0px;
+  left: 150px;
+}
+
+.heart-item {
+  /* Safari and Chrome */
+  -webkit-animation-name: breath;
+  /* 动画名称 */
+  -webkit-animation-duration: 1s;
+  /* 动画时长3秒 */
+  -webkit-animation-timing-function: ease-in-out;
+  /* 动画速度曲线：以低速开始和结束 */
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+
+.heart-item.active {
+  position: relative;
+  z-index: 9999;
+  cursor: pointer;
+}
+.heart-item.active .heart-1 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.heart-item.active .heart-2 {
+  display: none;
+}
+.heart-item.active .heart-3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-left: -109px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.heart-1 {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 0.5) inset;
+  border-radius: 15px;
+}
+
+.heart-2 {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-left: -25px;
+  /*move to left 125px*/
+  margin-top: 5px;
+  /* move to bottom 25px*/
+  background: #fff;
+  border-radius: 10px;
+}
+
+.heart-3 {
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin-left: -21px;
+  /*move left 100px*/
+  margin-top: 9px;
+  background: #a55351;
+  border-radius: 7.5px;
+}
+
+@-webkit-keyframes breath {
+  from {
+    transform: scale(0.8);
+  }
+  /* 动画50% 时 */
+  to {
+    transform: scale(1);
+    opacity: 1;
+    
+  }
+  /* 动画结束时的 */
+}
+.detail-mask {
+  width: 420px;
+  margin: 0 auto;
+  height: 600px;
+  background: rgba(188, 167, 119, 0.95);
+  position: absolute;
+  z-index: 100001;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.detail-title {
+  height: 40px;
+  background-image: url(https://h5.boqiicdn.com/activity-hua/mask-detail-bg.png);
+  background-repeat: no-repeat;
+  color: #542b05;
+  font-size: 20px;
+  padding: 10px 0 5px 30px;
+}
+.detail-title.dymaic{
+  border-bottom: 1px solid #9c7d4e;
+  font-size: 10px;
+}
+.detail-title.detail-tail-bg {
+  border-top: 1px solid #9c7d4e;
+}
+.detail-video {
+  padding: 0 35px;
+}
+
+.detail-swiper {
+  padding: 0 35px;
+  position: relative;
+}
+
+.detail-video-content {
+  width: 350px;
+  height: 240px;
+  margin-bottom: 20px;
+  margin: 20px auto;
+  position: relative;
+}
+.detail-video-content video {
+  object-fit: fill;
+  height: 240px;
+}
+.detail-video-content .player-icon {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%);
+  background-image: url(https://h5.boqiicdn.com/huarun/player.png);
+}
+
+.slick-slider {
+  overflow: hidden;
+}
+
+.detail-swiper-content {
+  display: none;
+}
+.detail-swiper-content .swiper-item {
+  position: relative;
+}
+.detail-swiper-content > div {
+  width: 363px;
+  height: 240px;
+}
+.detail-swiper-content > div img{
+  width: 363px;
+  height: 240px;
+}
+.detail-swiper-content .swiper-title {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 13px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  background-size: cover;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0px;
+  top: 50%;
+  background: url(https://h5.boqiicdn.com/huarun/left-arrow.png);
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 0px;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  background: url(https://h5.boqiicdn.com/huarun/right-arrow.png);
+  background-size: cover;
+  transform: translateY(-50%);
+}
+
+.detail-mask {
+  display: none;
+}
+
+.detail-mask-description {
+  font-size: 10px;
+  color: #522a06;
+  text-indent: 20px;
+  padding: 0 35px;
+  padding-top: 15px;
+}
+
+.detail-tail-bg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.map-pointers {
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  z-index: 9999;
+  left: 30%;
+  top: 10%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+html {
+  overflow: -moz-hidden-unscrollable; /*注意！若只打 hidden，chrome 的其它 hidden 会出问题*/
+  height: 100%;
+}
+
+body {
+height: 100%;
+width: calc(100vw + 18px); /*浏览器滚动条的长度大约是 18px*/
+overflow: auto;
+}
+
+#close{
+  width: 32px;
+  height: 32px;
+  background: url(https://h5.boqiicdn.com/close-btn.png);
+  background-size: cover;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+}
