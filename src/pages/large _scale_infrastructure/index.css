@@ -382,11 +382,13 @@ img {
 @-webkit-keyframes breath {
   from {
     transform: scale(0.8);
+    transform-origin: center;
   }
   /* 动画50% 时 */
   to {
     transform: scale(1);
     opacity: 1;
+    transform-origin: center;
     
   }
   /* 动画结束时的 */
