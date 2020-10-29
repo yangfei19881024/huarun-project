@@ -4,6 +4,7 @@ $(function () {
   var $height = $(window).height()
   var index_page = 0
   var index = 0
+  $('.wrap').height($height)
   $('.wrap  li').height($height)
 
   var $firstWidth = $width - 58 * 8 - 60 // 60是最后一个li的宽度

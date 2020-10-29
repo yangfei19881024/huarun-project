@@ -71,7 +71,9 @@ $(document).ready(function () {
       left: origin_left-60 + 'px',
       top: origin_top-60 + 'px'
     })
-    $('.heart-circle').eq(newIndex).find('.heart-item').find('.heart-3').text(address_cn)
+    
+    var address_cn_html = address_cn.length > 4 ? '<p>'+address_cn.substr(0,4)+'</p><p>'+address_cn.substr(5,address_cn.length)+'</p>' : '<p>'+address_cn+'</p>'
+    $('.heart-circle').eq(newIndex).find('.heart-item').find('.heart-3').html(address_cn)
 
 
     setTimeout(function(){
