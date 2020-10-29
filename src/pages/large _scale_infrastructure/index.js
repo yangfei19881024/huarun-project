@@ -68,12 +68,12 @@ $(document).ready(function () {
     $('.heart-item').removeClass('active')
 
     $('.heart-circle').eq(newIndex).find('.heart-item').addClass('active').end().css({
-      left: origin_left-60 + 'px',
-      top: origin_top-60 + 'px'
+      left: origin_left + 'px',
+      top: origin_top + 'px',
     })
     
-    var address_cn_html = address_cn.length > 4 ? '<p>'+address_cn.substr(0,4)+'</p><p>'+address_cn.substr(5,address_cn.length)+'</p>' : '<p>'+address_cn+'</p>'
-    $('.heart-circle').eq(newIndex).find('.heart-item').find('.heart-3').html(address_cn)
+    var address_cn_html = address_cn.length > 4 ? address_cn.substr(0,5)+'<br/>'+address_cn.substr(6,address_cn.length) : address_cn
+    $('.heart-circle').eq(newIndex).find('.heart-item').find('.heart-3').html('<p>'+address_cn_html+'</p>')
 
 
     setTimeout(function(){

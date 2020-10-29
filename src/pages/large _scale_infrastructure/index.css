@@ -313,6 +313,7 @@ img {
   /* 动画速度曲线：以低速开始和结束 */
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
+  transform-origin: center;
 }
 
 .heart-item.active {
@@ -334,11 +335,18 @@ img {
   border-radius: 50%;
   margin-left: -109px;
   color: #fff;
-  font-size: 10px;
-  line-height: 100px;
+  /* line-height: 100px; */
   text-align: center;
+  position: relative;
+  font-size: 16px;
 }
-
+.heart-item.active .heart-3 p{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
 .heart-1 {
   float: left;
   width: 30px;
