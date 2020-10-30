@@ -16,6 +16,7 @@ $(function () {
   // 	lis.eq(i).css('backgroundImage','url(images/'+ (i+1)+'.png)');
   // }
   lis.click(function (event) {
+    
     event.stopPropagation()
     var index = $('li.li').index(this)
     index_page = index
@@ -80,13 +81,18 @@ $(function () {
       .find('#right-handler')
       .click(function (event) {
         event.stopPropagation()
-        index++
+        ++index
+        console.log(index)
         console.log('index:'+index)
         if (index == len) {
           index = len - 1
-          return
+          
         }
-        if( index + 2 > len) return
+        
+        if( index + 2 > len) {
+          --index
+          return;
+        }
         var $parent = $(this).parents('li')
         let li_index = $('li.li').index($parent)
 
@@ -105,6 +111,7 @@ $(function () {
       .eq(index_page)
       .find('#left-handler')
       .click(function (event) {
+        console.log(index)
         event.stopPropagation()
         --index
         // if( index == len - 1 )return;
@@ -126,4 +133,8 @@ $(function () {
         })
       })
   }
+
+  $('.images-list').click(function(event){
+    event.stopPropagation()
+  })
 })

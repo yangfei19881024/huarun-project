@@ -5,6 +5,17 @@ $(document).ready(function () {
   $('.fade-image-bg > div').height($height)
   $('.address-map').height($height - 40)
 
+  $('.fade-image-bg').on("beforeChange", function() {
+
+    // $(this).find('.slick-slide').removeClass('animated heartBeat').hide();
+    // setTimeout(() => {
+    //   $(this).find('.slick-slide').addClass('animated heartBeat').show();
+    // }, 1000);
+
+    console.log("--->")
+
+  })
+
   var currentSlide = $('.fade-image-bg').slick({
     lazyLoad: 'ondemand',
     dots: false,
@@ -78,18 +89,21 @@ $(document).ready(function () {
 
     setTimeout(function(){
       $('.detail-swiper-content').eq(index).slick({
-        dots: false,
-        infinite: true,
-        speed: 500,
-        cssEase: 'linear',
-        prevArrow: $('.prev'),
-        nextArrow: $('.next'),
-      });
-    }, 0)
+          dots: false,
+          infinite: true,
+          speed: 500,
+          cssEase: 'linear',
+          prevArrow: $('.prev'),
+          nextArrow: $('.next'),
+        });
+      }, 100)
+
   });
 
+  var videoControl = null;
+
   $("body").on("click", ".heart-item.active" , function(){
-    var videos = ['01/香港國際貨櫃碼頭.mp4', '02/潤發倉.mp4', '03/1998新青衣油庫.mp4', 
+    var videos = ['01/香港國際貨櫃碼頭.mp4', '02/潤發倉.mp4', '03/沙田冷倉、百適貨倉.mp4', 
   '04/1998新青衣油庫.mp4', '05/1998大老山隧道.mp4', '06/三号干线郊野公园段.mp4', '07/', '08/灏景湾.mp4', '09/上水屠房.mp4', '10/華人銀行.mp4', '11/萬眾電話.mp4', '']
     $('.detail-mask').show()
     $('.detail-swiper-content').hide();
@@ -98,6 +112,7 @@ $(document).ready(function () {
     $('.detail-mask-description').text(desc)
     $('.detail-title.dymaic').text(address_cn+address_en)
     $('#mask-video').attr('src', '../../images/part01/'+videos[index])
+    
   }) 
   // (".heart-item.active").click(function(){
   //   alert("hahah")
@@ -116,8 +131,12 @@ $(document).ready(function () {
   $('.detail-mask').css('height', $height+'px');
   $("#close").click(function(){
     $('.detail-mask').hide()
+    var video = document.getElementById('mask-video')
+
+    video.pause()
   })
 
+  
 
 
 })

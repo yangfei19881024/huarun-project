@@ -517,11 +517,12 @@ img {
 }
 
 .detail-mask-description {
-  font-size: 10px;
+  line-height: 22px;
+  font-size: 15px;
   color: #522a06;
   text-indent: 20px;
   padding: 0 35px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .detail-tail-bg {

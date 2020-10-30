@@ -175,7 +175,7 @@
 			position: relative;
 			overflow-x: hidden;
 			overflow-y: hidden;
-			cursor: move;
+			/* cursor: move; */
 		}
 		.images-list-container{
 			width: 10000px;
