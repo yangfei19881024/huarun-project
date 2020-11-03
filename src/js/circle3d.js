@@ -39,9 +39,10 @@ function circle3d_firstStart(){
 	
 	
 	
-	XML_DATA.houseList = XML_DATA.sortData();
+	// XML_DATA.houseList = XML_DATA.sortData();
 	
 	boxNum = XML_DATA.houseList.length;
+	console.log("boxNum->"+boxNum)
 	boxArray = new Array(boxNum);
 	boxArrayMirror = new Array(boxNum);
 	boxs = new THREE.Group();
@@ -55,9 +56,6 @@ function circle3d_firstStart(){
 	console.log(boxArray)
 	console.log("len:"+boxArray.length)
 	
-	if( count == 2 ) {
-		boxArray = boxArray.slice(30, 45)
-	}
 	
 	for(var i=0; i<boxArray.length; i++){
 		var texloader = new THREE.TextureLoader();	//マッピングテクスチャ
@@ -74,6 +72,9 @@ function circle3d_firstStart(){
 		boxArray[i].position.set(x,y,z);
 		boxArray[i].rotation.set(0,radian,0);
 		boxArray[i].name = XML_DATA.houseList[i].dre;
+		boxArray[i].image = XML_DATA.houseList[i].image;
+		boxArray[i].desc = XML_DATA.houseList[i].desc;
+		boxArray[i].title = XML_DATA.houseList[i].title;
 		
 		//映り込み
 		var geometryM = new THREE.PlaneGeometry(boxSize, boxSize, 0);	//幅, 高さ, 奥行き
@@ -134,6 +135,9 @@ function circle3d_firstStart(){
 	});
 	
 	$("#"+targetElem).on(onMove,function(ev){
+		console.log('move-->')
+		console.log(c3dMouseDownFlag)
+		console.log(!SORT_VERTICAL.openFlag)
 		if(c3dMouseDownFlag && !SORT_VERTICAL.openFlag){
 			//SORT_VERTICAL.openStandbyFlag = false;
 			cancelBoxsRotation();
@@ -581,7 +585,8 @@ var choiceHouseData = {};		//手前に来た物件のデータ
 function StopAndChoiceBox(){
 	//console.log("StopAndChoiceBox");
 	StopAndChoiceBoxTimerID = setTimeout(function(){
-		/*if(!SORT_VERTICAL.openStandbyFlag) */darkenBoxs();
+		/*if(!SORT_VERTICAL.openStandbyFlag) */
+		// darkenBoxs();
 		if(!SORT_VERTICAL.openFlag) showHouseName();
 	},300);
 }
@@ -617,6 +622,8 @@ function showHouseName(){
 	for(var i=0; i<boxArray.length; i++){
 		if(Math.abs(boxArray[i].getWorldPosition().x)<=0.5 && boxArray[i].getWorldPosition().z>0){
 			choiceBoxObj = boxArray[i];
+			console.log("choiceBoxObj------>")
+			console.log(choiceBoxObj)
 			choiceBoxMirrorObj = boxArrayMirror[i];
 			//console.log("物件名を表示-選ばれた物件を確認");
 			break;
@@ -738,7 +745,7 @@ function setClickEventChoiceBox(){
 						}
 					}else{
 						// SOUND.playThumClick();
-						SORT_VERTICAL.openThumbnail(choiceBoxObj.name, getScreenPoint(choiceBoxObj));
+						SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
 					}
 				}
 			}
@@ -758,7 +765,7 @@ function setClickEventChoiceBox(){
 					}
 				}else{
 					// SOUND.playThumClick();
-					SORT_VERTICAL.openThumbnail(choiceBoxObj.name, getScreenPoint(choiceBoxObj));
+					SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
 				}
 			}
 		});

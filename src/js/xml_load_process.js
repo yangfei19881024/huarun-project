@@ -1,10 +1,16 @@
 $(function(){
 	
-	XML_DATA = new xmlLoadProcess();
+	XML_DATA = new xmlLoadProcess(window.city_con);
 	
 });
 
-var xmlLoadProcess = function(){
+function xmlLoadProcess(data){
+	// this.data = data;
+	this.initData(data)
+	
+}
+
+xmlLoadProcess.prototype.initData = function(datas){
 	var my = this;
 	//var date = new Date();
 	//var today = "?d="+date.getDate()+date.getHours();
@@ -16,68 +22,27 @@ var xmlLoadProcess = function(){
 	
 	this.houseList = [];	//XMLデータをリスト化、オブジェクト化して格納
 	this.dataProcessed = false;		//XMLデータが処理されたかどうか
-	$.ajax({
-		url: "http://localhost:3000/list",
-		type: "get",
-		dataType: "xml",
-		//async: true,
-		cache: false,
-		success: function(xml){
-			//ここでパースする
-			$(xml).find('house').each(function(i){
-				var photoObjList = [];
-				$(this).find("photo").each(function(i2){
-					var photoObj = {
-						type: $(this).attr("type"),
-						space: $(this).attr("space"),
-						copyright: $(this).attr("copyright"),
-						path: $(this).attr("path")+cashNum,
-						thumbnail: $(this).attr("thumbnail")+cashNum,
-						v360path: $(this).attr("v360path")
-					};
-					photoObjList.push(photoObj);
-				});
-				var houseObj = {
-					name: $(this).attr("name"),
-					subname: $(this).attr("subname"),
-					dre: $(this).attr("dre"),
-					year: $(this).attr("year")*1,
-					viewnum: $(this).attr("viewnum")*1,
-					new: $(this).attr("new"),
-					view: $(this).attr("view"),
-					photos: photoObjList,
-					check: false
-				};
-			
-				if($(this).attr("new")==="true"){
-					houseObj.new = true;
-				}else{
-					houseObj.new = false;
-				}
-			
-				if($(this).attr("view")==="true"){
-					houseObj.view = true;
-				}else{
-					houseObj.view = false;
-				}
-				my.houseList.push(houseObj);
-				console.log("my.houseList--->")
-				console.log(my.houseList)
-			});
-			
-			my.dataProcessed = true;
-			IMG_PRELOAD.loadHouseSImg(my.getHouseSImgURL());
-			
-			//console.log(my.houseList[6].name);
-			//console.log(my.houseList[6].photos[3].path);
-			//my.getHouseSImgURL();
-    },
-		error: function(){
-			alert('Error loading XML document');
+
+
+	// 本地获取图片
+	this.houseList = datas.map(function(item){
+		return {
+			name: item.name,
+			image: item.image,
+			logo: item.logo,
+			title: item.title,
+			desc: item.desc,
+			view: true
 		}
-	});
-	//this.houseList[6].name
-	//this.houseList[6].photos[3].type
+	})
+	console.log('最新的数据')
+	console.log(this.houseList)
+	// 本地获取图片end
+
+	this.dataProcessed = true;
+			//---注释掉---
+  IMG_PRELOAD.loadHouseSImg(this.getHouseSImgURL());
+
 };
 
 
@@ -87,8 +52,7 @@ xmlLoadProcess.prototype.getHouseSImgURL = function(){
 	var sImgList = [];
 	for(var i=0; i<this.houseList.length; i++){
 		if(this.houseList[i].view == true){
-			var path = "http://www.baqueratta.com/images/"+this.houseList[i].dre+"/"+this.houseList[i].photos[0].thumbnail+"?a=150";
-			path = path.replace(".jpgs", ".jpg");
+			var path = this.houseList[i].logo+"?a=150";
 			sImgList.push(path);
 		}
 	}

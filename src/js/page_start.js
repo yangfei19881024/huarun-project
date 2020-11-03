@@ -26,10 +26,6 @@ if(ua.indexOf("firefox") != -1){
 }
 
 //console.log(ua);
-
-
-
-
 //イベント PC or SP
 var onStart,onEnd,onMove;
 if(device=="pc"){
@@ -181,10 +177,10 @@ function startCircle(){
 		
 		//! 模拟重新调用，重新生成 circle3d
 
-		setTimeout(function(){
-			$('#circle3d').empty()
-			circle3d_firstStart()
-		}, 12000)
+		// setTimeout(function(){
+		// 	$('#circle3d').empty()
+		// 	circle3d_firstStart()
+		// }, 12000)
     
 	}else{
 		$("#nowLoading").fadeIn(300);
@@ -202,7 +198,8 @@ function startCircle(){
 	}
 }
 
-$('body').on('click', '.close-btn', function(){
-  alert('1')
-  $('.brand-info').hide()
+$('.slick-slide').click(function(){
+	alert($(this).text())
 })
+
+

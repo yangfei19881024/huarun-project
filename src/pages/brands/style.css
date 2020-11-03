@@ -1086,20 +1086,30 @@ html, body {
   height: 440px;
   left: 50%;
   top: 50%;
-  background: red;
+  background: #C9B683;
   transform: translate3d(-50%,-50%, 0);
+  padding: 50px 40px;
 }
 .brand-left, .brand-right{
   width: 50%;
   height: 100%;
   float: left;
 }
+.brand-title{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 .brand-left{
-   background: blue;
+   /* background: blue; */
+}
+.brand-left img{
+  width: 520px;
+  height: 340px;
 }
 .brand-right{
-  background: yellow;
-  padding: 76px 0 0 40px;
+  /* background: yellow; */
+  color: #391D00;
+  padding: 6px 0 0 40px;
 }
 .close-btn{
   position: absolute;
@@ -1126,4 +1136,16 @@ html, body {
   top: 50%;
   color: #fff;
   font-size: 30px;
+}
+.footer-actions {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+}
+.footer-action div{
+  height: 80px;
+  line-height: 80px;
+  padding: 0 40px;
+  color: #000;
 }
