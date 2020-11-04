@@ -42,7 +42,6 @@ function circle3d_firstStart(){
 	// XML_DATA.houseList = XML_DATA.sortData();
 	
 	boxNum = XML_DATA.houseList.length;
-	console.log("boxNum->"+boxNum)
 	boxArray = new Array(boxNum);
 	boxArrayMirror = new Array(boxNum);
 	boxs = new THREE.Group();
@@ -52,10 +51,6 @@ function circle3d_firstStart(){
 	baseThumImgPathList = XML_DATA.getHouseSImgURL();
 	thumImgPathList = XML_DATA.getHouseSImgURL();
 	//console.log(thumImgPathList);
-	console.log("boxArray")
-	console.log(boxArray)
-	console.log("len:"+boxArray.length)
-	
 	
 	for(var i=0; i<boxArray.length; i++){
 		var texloader = new THREE.TextureLoader();	//マッピングテクスチャ
@@ -78,7 +73,7 @@ function circle3d_firstStart(){
 		
 		//映り込み
 		var geometryM = new THREE.PlaneGeometry(boxSize, boxSize, 0);	//幅, 高さ, 奥行き
-		var materialM = new THREE.MeshBasicMaterial({ color: 0x333333, map:tex, transparent:true, opacity:1 });	//色
+		var materialM = new THREE.MeshBasicMaterial({ color: 0xffffff, map:tex, transparent:false, opacity:1 });	//色
 		materialM.side = THREE.DoubleSide;
 		boxArrayMirror[i] = new THREE.Mesh(geometryM, materialM);
 		y = y-boxSize;
@@ -101,9 +96,9 @@ function circle3d_firstStart(){
 	
 	
 	//レンダラー
-  renderer = new THREE.WebGLRenderer({antialias:true});
+  renderer = new THREE.WebGLRenderer({antialias:true, alpha: true});
   renderer.setSize( stageW, stageH );
-	renderer.setClearColor(0x000000, 1.0);
+	renderer.setClearColor(0xffffff, 0);
   document.getElementById(targetElem).appendChild(renderer.domElement);
 	
 	$("#"+targetElem).fadeIn(300);
@@ -135,9 +130,9 @@ function circle3d_firstStart(){
 	});
 	
 	$("#"+targetElem).on(onMove,function(ev){
-		console.log('move-->')
-		console.log(c3dMouseDownFlag)
-		console.log(!SORT_VERTICAL.openFlag)
+		// console.log('move-->')
+		// console.log(c3dMouseDownFlag)
+		// console.log(!SORT_VERTICAL.openFlag)
 		if(c3dMouseDownFlag && !SORT_VERTICAL.openFlag){
 			//SORT_VERTICAL.openStandbyFlag = false;
 			cancelBoxsRotation();
@@ -159,6 +154,7 @@ function circle3d_firstStart(){
 	});
 	
 	$("#"+targetElem).on(onEnd,function(ev){
+		
 		if(c3dMouseDownFlag && !SORT_VERTICAL.openFlag){
 			c3dSwipAnimate();
 			c3dMouseDownFlag = false;
@@ -583,12 +579,13 @@ var choiceHouseData = {};		//手前に来た物件のデータ
 
 //circleが止まったとき
 function StopAndChoiceBox(){
+	//! 滑动结束
 	//console.log("StopAndChoiceBox");
-	StopAndChoiceBoxTimerID = setTimeout(function(){
+	// StopAndChoiceBoxTimerID = setTimeout(function(){
 		/*if(!SORT_VERTICAL.openStandbyFlag) */
 		// darkenBoxs();
 		if(!SORT_VERTICAL.openFlag) showHouseName();
-	},300);
+	// },300);
 }
 
 //センター以外のboxを暗く
@@ -622,8 +619,9 @@ function showHouseName(){
 	for(var i=0; i<boxArray.length; i++){
 		if(Math.abs(boxArray[i].getWorldPosition().x)<=0.5 && boxArray[i].getWorldPosition().z>0){
 			choiceBoxObj = boxArray[i];
-			console.log("choiceBoxObj------>")
+			console.log("最后的选择choiceBoxObj------>")
 			console.log(choiceBoxObj)
+			$("#houseName div").text(choiceBoxObj.title)
 			choiceBoxMirrorObj = boxArrayMirror[i];
 			//console.log("物件名を表示-選ばれた物件を確認");
 			break;
@@ -817,8 +815,8 @@ function getScreenPoint(obj3D){
 
 //センターサムネを隠す
 function hideChoicedThumbnail(){
-	choiceBoxObj.material.opacity = 0;
-	choiceBoxMirrorObj.material.opacity = 0;
+	choiceBoxObj.material.opacity = 1;
+	choiceBoxMirrorObj.material.opacity = 1;
 }
 
 

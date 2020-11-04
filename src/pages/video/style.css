@@ -1,0 +1,11 @@
+.video-container{
+  float: left;
+}
+.video-menu {
+  float: right;
+}
+
+#dplayer{
+  width: 470px;
+  height: 340px;
+}

@@ -13,7 +13,7 @@ $(function(){
     console.log(direction)
 
     var index = direction.currentSlide 
-
+    $('.footer-action div').eq(index).addClass('active')
     var datas_ary = [tech_finance, consume, healthy, city_con, energy_services]
 
     // xmlLoadProcess(datas_ary[index])
@@ -28,6 +28,7 @@ $(function(){
 
   $('body').on('click', '.close-btn', function(){
     $('.brand-info').hide()
+    $('.brand-content').hide()
   })
  
 });

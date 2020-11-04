@@ -1,6 +1,6 @@
 $(function(){
 	
-	XML_DATA = new xmlLoadProcess(window.city_con);
+	XML_DATA = new xmlLoadProcess(window.tech_finance);
 	
 });
 
