@@ -1,11 +1,95 @@
+.video-page{
+  overflow: hidden;
+}
 .video-container{
+  width: 72%;
+  height: 100%;
+  /* padding-top: 85px; */
   float: left;
 }
+.video-menu-title-con{
+  padding-left: 26px;
+}
 .video-menu {
+  width: 27%;
   float: right;
+  height: 100%;
+  
+  padding-top: 85px;
+  border-left: 1px solid #d1d1d1;
+}
+
+.video-menu-inner{
+  width: 828px;
+  height: 597px;
+}
+
+.dplayer-con {
+  
+  background: #262626;
+  width: 808px;
+  height: 577px;
+  border-radius: 20px;
+  margin: 85px auto;
+  padding-top: 25px;
+  padding-left: 18px;
 }
 
 #dplayer{
-  width: 470px;
-  height: 340px;
+  width: 766px;
+  height: 527px;
+  
+  border-radius: 20px;
+  
+}
+
+.video-menu-title{
+  font-weight: bold;
+  font-size: 24px;
+  color: #7B6E4E;
+
+}
+
+.video-menu-subtitle{
+  font-size: 20px;
+  color: #7B6E4E;
+  margin-top: 10px;
+}
+.video-menu-title-con{
+  border-bottom: 1px solid #d1d1d1;
+  padding-bottom: 20px;;
+}
+.video-menu-item-con{
+  padding: 20px 0;
+  border-bottom: 1px solid #d1d1d1;
+}
+.video-menu-item{
+  padding: 13px 0 13px 26px;
+  overflow: hidden;
+  
+  cursor: pointer;
+}
+.video-menu-item.active{
+  background: #b2a070;
+}
+.video-menu-item.active p {
+  color: #FFFBCC;
+}
+.video-menu-item > div{
+  float: left;
+}
+
+.video-thumbnail img{
+  width: 98px;
+  height: 56px;
+}
+
+.video-item-title{
+  font-size: 20px;
+  color: #655a46;
+  font-weight: 400;
+}
+.video-item-subtitle{
+  font-size: 16px;
+  color: #8f8b7f;
 }
