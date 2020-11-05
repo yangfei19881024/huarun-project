@@ -1418,7 +1418,7 @@ body {
 }
 .brand-content {
   position: absolute;
-  width: 60%;
+  width: 85%;
   height: 440px;
   left: 50%;
   top: 50%;
@@ -1432,7 +1432,7 @@ body {
   background: url(https://h5.boqiicdn.com/hr/brand-bgs.png);
 }
 .brand-right {
-  padding: 50px 40px 50px 0px;
+  padding: 49px 0 0 40px !important; 
 }
 .brand-left,
 .brand-right {

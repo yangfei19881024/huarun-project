@@ -1082,7 +1082,7 @@ html, body {
 }
 .brand-content{
   position: absolute;
-  width: 80%;
+  width: 85%;
   height: 440px;
   left: 50%;
   top: 50%;
@@ -1099,7 +1099,7 @@ html, body {
 }
 .brand-right{
   background: yellow;
-  padding: 76px 0 0 40px;
+  padding: 49px 0 0 40px;
 }
 .close-btn{
   position: absolute;
