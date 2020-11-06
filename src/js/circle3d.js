@@ -45,7 +45,7 @@ function circle3d_firstStart(){
 	boxArray = new Array(boxNum);
 	boxArrayMirror = new Array(boxNum);
 	boxs = new THREE.Group();
-	boxSize = 71;
+	boxSize = 60;
 	hankei = ((boxSize*boxArray.length)*1.1)/Math.PI/2;
 	
 	baseThumImgPathList = XML_DATA.getHouseSImgURL();
@@ -73,7 +73,8 @@ function circle3d_firstStart(){
 		
 		//映り込み
 		var geometryM = new THREE.PlaneGeometry(boxSize, boxSize, 0);	//幅, 高さ, 奥行き
-		var materialM = new THREE.MeshBasicMaterial({ color: 0xffffff, map:tex, transparent:false, opacity:1 });	//色
+		// var materialM = new THREE.MeshBasicMaterial({ color: 0xffffff, map:tex, transparent:false, opacity:1 });
+		var materialM = new THREE.MeshBasicMaterial({ color: 0x333333, map:tex, transparent:false, opacity:0.7 });	//色
 		materialM.side = THREE.DoubleSide;
 		boxArrayMirror[i] = new THREE.Mesh(geometryM, materialM);
 		y = y-boxSize;
@@ -732,7 +733,7 @@ function setClickEventChoiceBox(){
 				// SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
 				// 交差していた場合の処理
 				if (checkHitBox(ev,"end",choiceBoxObj) && Math.abs(c3dSwipEndMoveR)<0.001 &&  $("#houseName").css("display")=="block"){
-					c3dMouseActLockFlag = true;
+					// c3dMouseActLockFlag = true;
 					SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
 					// if(viewDataType=="space"/* && SORT_VERTICAL.openStandbyFlag*/){
 					// 	for(var i=0; i<searchHouseData.length; i++){
