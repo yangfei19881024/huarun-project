@@ -131,10 +131,10 @@ function circle3d_firstStart(){
 	
 	$("#"+targetElem).on(onMove,function(ev){
 		// console.log('move-->')
-		
-		if(c3dMouseDownFlag && !SORT_VERTICAL.openFlag){
-			console.log(c3dMouseDownFlag)
+		console.log(c3dMouseDownFlag)
 			console.log(!SORT_VERTICAL.openFlag)
+		if(c3dMouseDownFlag && !SORT_VERTICAL.openFlag){
+			
 			//SORT_VERTICAL.openStandbyFlag = false;
 			cancelBoxsRotation();
 			//マウス座標2D変換
@@ -705,7 +705,7 @@ function setClickEventChoiceBox(){
 				}
 			});
 		}
-	
+		//!! 这里的逻辑是bug的突破口
 		$("#"+targetElem).on(onEnd, function(ev){
 			if (ev.target == renderer.domElement){
 				//マウス座標2D変換
@@ -729,23 +729,24 @@ function setClickEventChoiceBox(){
 				
 				// レイとBOXの交差判定
 				var objs = ray.intersectObjects( boxArray );*/
-				
+				// SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
 				// 交差していた場合の処理
-				if (checkHitBox(ev,"end",choiceBoxObj) && Math.abs(c3dSwipEndMoveR)<0.001 && $("#houseName").css("opacity")>=1 && $("#houseName").css("display")=="block"){
+				if (checkHitBox(ev,"end",choiceBoxObj) && Math.abs(c3dSwipEndMoveR)<0.001 &&  $("#houseName").css("display")=="block"){
 					c3dMouseActLockFlag = true;
-					if(viewDataType=="space"/* && SORT_VERTICAL.openStandbyFlag*/){
-						for(var i=0; i<searchHouseData.length; i++){
-							if(choiceBoxObj.name==searchHouseData[i].thumbnail){
-								// SOUND.playThumClick();
-								SORT_VERTICAL.openFlag = true;
-								VIEW_PHOTO.openView("space",i,searchHouseData);
-								break;
-							}
-						}
-					}else{
-						// SOUND.playThumClick();
-						SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
-					}
+					SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
+					// if(viewDataType=="space"/* && SORT_VERTICAL.openStandbyFlag*/){
+					// 	for(var i=0; i<searchHouseData.length; i++){
+					// 		if(choiceBoxObj.name==searchHouseData[i].thumbnail){
+					// 			// SOUND.playThumClick();
+					// 			SORT_VERTICAL.openFlag = true;
+					// 			VIEW_PHOTO.openView("space",i,searchHouseData);
+					// 			break;
+					// 		}
+					// 	}
+					// }else{
+					// 	// SOUND.playThumClick();
+					// 	SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
+					// }
 				}
 			}
 		});
@@ -816,8 +817,8 @@ function getScreenPoint(obj3D){
 
 //センターサムネを隠す
 function hideChoicedThumbnail(){
-	choiceBoxObj.material.opacity = 1;
-	choiceBoxMirrorObj.material.opacity = 1;
+	choiceBoxObj.material.opacity = 0;
+	choiceBoxMirrorObj.material.opacity = 0;
 }
 
 

@@ -82,41 +82,41 @@ var siteNavi = function(){
 
 siteNavi.prototype.searchAnima = function(){
  
- var my = this;
- var img = new Image();
- img.src = "images/btn_search.png";
- var imgM = new Image();
- imgM.src = "images/btn_search_mr.png";
- var t = 150;
+//  var my = this;
+//  var img = new Image();
+//  img.src = "images/btn_search.png";
+//  var imgM = new Image();
+//  imgM.src = "images/btn_search_mr.png";
+//  var t = 150;
  
- var iconH = function(){
-	 //虫眼鏡アイコンの横幅は42〜65px window幅の6%
-	 var H = Math.max($(window).innerWidth()*0.06,42);
-	 H = Math.min(H,65)*(98/108);
-	 return H;
- }
+//  var iconH = function(){
+// 	 //虫眼鏡アイコンの横幅は42〜65px window幅の6%
+// 	 var H = Math.max($(window).innerWidth()*0.06,42);
+// 	 H = Math.min(H,65)*(98/108);
+// 	 return H;
+//  }
  
- var animaIcon = function(){
-	 $("#navSearch .anima").css("height",iconH()+"px").animate({width:"1%",left:"49.5%",height:iconH()},t,"swing",function(){
-		 $(this).attr("src",imgM.src).css("height",iconH()+"px").animate({width:"100%",left:"0%",height:iconH()},t,"swing",function(){
-			 $(this).css("height",iconH()+"px").animate({width:"0%",left:"50%",height:iconH()},t,"swing",function(){
-				 $(this).attr("src",img.src).css("height",iconH()+"px").animate({width:"100%",left:"0%",height:iconH()},t,"swing",function(){
-					 if(my.viewNavFlag){
-						 $("#navSearch .anima").height(iconH());
-						 setTimeout(function (){
-							 $("#navSearch .anima").height(iconH());
-							 if(my.viewNavFlag) animaIcon();
-						 },3000);
-					 }else{
-						 $("#navSearch .anima").css("width","100%");
-						 $("#navSearch .anima").css("height",iconH()+"px");
-					 }
-				 })
-			 });
-		 });
-	 });
- }
- animaIcon();
+//  var animaIcon = function(){
+// 	 $("#navSearch .anima").css("height",iconH()+"px").animate({width:"1%",left:"49.5%",height:iconH()},t,"swing",function(){
+// 		 $(this).attr("src",imgM.src).css("height",iconH()+"px").animate({width:"100%",left:"0%",height:iconH()},t,"swing",function(){
+// 			 $(this).css("height",iconH()+"px").animate({width:"0%",left:"50%",height:iconH()},t,"swing",function(){
+// 				 $(this).attr("src",img.src).css("height",iconH()+"px").animate({width:"100%",left:"0%",height:iconH()},t,"swing",function(){
+// 					 if(my.viewNavFlag){
+// 						 $("#navSearch .anima").height(iconH());
+// 						 setTimeout(function (){
+// 							 $("#navSearch .anima").height(iconH());
+// 							 if(my.viewNavFlag) animaIcon();
+// 						 },3000);
+// 					 }else{
+// 						 $("#navSearch .anima").css("width","100%");
+// 						 $("#navSearch .anima").css("height",iconH()+"px");
+// 					 }
+// 				 })
+// 			 });
+// 		 });
+// 	 });
+//  }
+//  animaIcon();
 };
 
 

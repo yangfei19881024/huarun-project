@@ -65,17 +65,24 @@
 		.side-bar-info:hover .word{
 			color: #fff;
 		}
+		.word-en {
+			writing-mode: vertical-rl;
+			font-weight: bold !important;
+			position: relative;
+    	right: 3px;
+		}
 		.word{
 			width: 15px;
-		    margin: 0 auto;
-		    line-height: 24px;
-		    font-size: 22px;
-		    word-wrap: break-word;/*英文的时候需要加上这句，自动换行*/
-		    word-break:break-all;
-	    	color: #8b7468;
-	    	font-family: didot;
-	    	padding-top: 100px;
-	    	font-weight: bold;
+			margin: 0 auto;
+			line-height: 24px;
+			font-size: 22px;
+			word-wrap: break-word;
+			word-break:break-all;
+			color: #8b7468;
+			font-family: didot;
+			padding-top: 70px;
+			font-weight: bold;
+			
 		}
 		.word span{
 			font-weight: normal;	
@@ -108,13 +115,15 @@
 		
 		.content-left{
 			width: 30%;
-			background:linear-gradient(to right, #daceb1, #bfa477);
+			background: url(../../images/part05/bgs/other_left_bg.jpeg);
+			background-size: cover;
 			position: relative;
 			float: left;
-			border-right: 5px solid #b4b4b4;
-    	box-shadow: 30px 0px 29px 12px #fff;
+			background-repeat: no-repeat;
+			/* border-right: 5px solid #b4b4b4; */
+    	/* box-shadow: 30px 0px 29px 12px #fff; */
 		}
-		.content-left:after{
+		/* .content-left:after{
 			position: absolute;
 
 			content: "";
@@ -125,22 +134,23 @@
 			background-repeat: no-repeat;
 			background-position: bottom;
 			bottom: 20px;
-		}
+		} */
 		.content-left-part{
 			/* padding: 30px 0 0 30px; */
 			padding-left: 10%;
+			padding-top: 70px;
 		}
 		.logo{
-			width: 70%;
+			width: 64%;
 		}
 		.module-desc{
 			margin-top: 30px;
 			font-size: 14px;
 			color: #5f4d46;
 			font-weight: 600;
-			text-indent: 15px;
-			line-height: 26px;
-			padding-right: 30px;
+			text-indent: 30px;
+    	line-height: 32px;
+			/* padding-right: 30px; */
 		}
 		.page-num{
 			position: absolute;
@@ -151,26 +161,34 @@
 			z-index: 999;
 		}
 		.content-right{
-			/*float: left;*/
-			margin-left: 300px;
+			float: left;
+			/* margin-left: 300px; */
 			background: #fff;
-			padding-left: 50px;
+			/* padding-left: 50px; */
 			padding-top: 165px;
+			background: url(../../images/part05/bgs/other_right_bg.jpeg);
 			/*width: 100%;*/
+			background-position: -6px;
+		}
+		.content-right-inner{
+			padding-left: 80px;
 		}
 		.time-line{
 			height: 25px;
 			position: relative;
 			border-bottom: 1px solid #aeacab;
-
+			margin-left: 155px;
+			position: relative;
 		}
 		.time-info{
 			position: absolute;
-			background: #fff;
-			font-size: 35px;
-			color: #a08150;
+			/* background: #fff; */
+			font-size: 40px;
+			color: #7f663f;
 			top: -12px;
-   	 		padding-right: 5px;
+			left: -155px;
+			padding-right: 5px;
+			/* font-family: didot; */
 		}
 		.images-list {
 			margin-top: 18px;

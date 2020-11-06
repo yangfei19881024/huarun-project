@@ -137,4 +137,24 @@ $(function () {
   $('.images-list').click(function(event){
     event.stopPropagation()
   })
+
+  // 宽度设置
+
+  var $widow = $(window)
+
+  $('.content-left').css({
+    width: $widow.width() * 0.3 + 'px'
+  })
+
+  $('.content-right').css({
+    width: $widow.width() * 0.7 + 'px'
+  })
+  
+
+  var padding = $widow.width() * 0.3 * 0.16
+  $('.content-left-part').css({
+    paddingLeft: padding + 'px',
+    paddingRight: padding + 'px',
+  })
+
 })
