@@ -74,11 +74,11 @@ function circle3d_firstStart(){
 		//映り込み
 		var geometryM = new THREE.PlaneGeometry(boxSize, boxSize, 0);	//幅, 高さ, 奥行き
 		// var materialM = new THREE.MeshBasicMaterial({ color: 0xffffff, map:tex, transparent:false, opacity:1 });
-		var materialM = new THREE.MeshBasicMaterial({ color: 0x333333, map:tex, transparent:false, opacity:0.7 });	//色
+		var materialM = new THREE.MeshBasicMaterial({ color: 0x333333, map:tex, transparent:false, opacity:0.5 });	//色
 		materialM.side = THREE.DoubleSide;
 		boxArrayMirror[i] = new THREE.Mesh(geometryM, materialM);
 		y = y-boxSize;
-		boxArrayMirror[i].position.set(x,y,z);
+		boxArrayMirror[i].position.set(x,y-2,z-2);
 		boxArrayMirror[i].scale.y = boxArrayMirror[i].scale.y*(-1);
 		//boxArrayMirror[i].scale.x = boxArrayMirror[i].scale.x*(-1);
 		boxArrayMirror[i].rotation.set(0,radian,0);
@@ -1090,7 +1090,7 @@ function c3dAddDataMove(nextLeng, num, searchData){
 	
 	//映り込み
 	var geometryM = new THREE.PlaneGeometry(boxSize, boxSize, 0);	//幅, 高さ, 奥行き
-	var materialM = new THREE.MeshBasicMaterial({ color: 0x333333, map:tex, transparent:true, opacity:0 });	//色
+	var materialM = new THREE.MeshBasicMaterial({ color: 0x333333, map:tex, transparent:true, opacity:0.5 });	//色
 	materialM.side = THREE.DoubleSide;
 	boxArrayMirror.push(new THREE.Mesh(geometryM, materialM));
 	var targetM = boxArrayMirror[num];
