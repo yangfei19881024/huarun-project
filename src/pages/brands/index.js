@@ -29,4 +29,25 @@ $(function(){
     $('.brand-content').hide()
   })
  
+
+  // 设定宽高度
+
+  var $window = $(window)
+
+  var maskWidth = $window.width() * 0.85;
+  var maskHeight = maskWidth * 0.38;
+
+  $('.brand-content').css({
+    width: maskWidth + 'px',
+    height: maskHeight + 'px'
+  })
+
+  // 左边padding 设置
+  var left_top_padding = maskHeight * 0.127;
+
+  $('.brand-left').css({
+    paddingTop: left_top_padding + 'px',
+    paddingBottom: left_top_padding + 'px'
+  })
+
 });

@@ -135,7 +135,7 @@ body {
   /*margin-top: -190px;*/
   text-align: center;
   color: #fff;
-  z-index: 5;
+  z-index: 0;
   width: 165px;
   height: 60px;
   line-height: 45px;
@@ -1428,11 +1428,11 @@ body {
   z-index: 9999;
 }
 .brand-left{
-  padding: 50px 0px 50px 40px;
+  padding: 78px 40px 78px 40px;
   background: url(https://h5.boqiicdn.com/hr/brand-bgs.png);
 }
 .brand-right {
-  padding: 49px 0 0 40px !important;
+  padding: 49px 70px 0 40px !important;
 }
 .brand-left,
 .brand-right {
@@ -1450,8 +1450,10 @@ body {
   /* background: blue; */
 }
 .brand-left img {
-  width: 520px;
-  height: 340px;
+  /* width: 520px;
+  height: 340px; */
+  width: 100%;
+  height: 100%;
 }
 .brand-right {
   /* background: yellow; */

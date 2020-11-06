@@ -131,9 +131,10 @@ function circle3d_firstStart(){
 	
 	$("#"+targetElem).on(onMove,function(ev){
 		// console.log('move-->')
-		// console.log(c3dMouseDownFlag)
-		// console.log(!SORT_VERTICAL.openFlag)
+		
 		if(c3dMouseDownFlag && !SORT_VERTICAL.openFlag){
+			console.log(c3dMouseDownFlag)
+			console.log(!SORT_VERTICAL.openFlag)
 			//SORT_VERTICAL.openStandbyFlag = false;
 			cancelBoxsRotation();
 			//マウス座標2D変換
