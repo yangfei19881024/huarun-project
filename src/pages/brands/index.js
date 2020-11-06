@@ -17,7 +17,7 @@ $(function(){
     var datas_ary = [tech_finance, consume, healthy, city_con, energy_services]
 
     // xmlLoadProcess(datas_ary[index])
-    // $('#houseName').hide()
+    $('#houseName').hide()
     XML_DATA = new xmlLoadProcess(datas_ary[index]);
     $('#circle3d').empty()
     circle3d_firstStart()
