@@ -76,7 +76,7 @@ img {
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-image: url(https://h5.boqiicdn.com/activity-hua/07.jpg);
+  background-image: url(../../images/part01/background/07.jpg);
 }
 .fade-image-bg .fade-image-08 {
   width: 100%;
@@ -408,7 +408,7 @@ img {
 
 .detail-title {
   height: 40px;
-  background-image: url(https://h5.boqiicdn.com/activity-hua/mask-detail-bg.png);
+  background-image: url(../../images/part01/mask-detail-bg.png);
   background-repeat: no-repeat;
   color: #542b05;
   font-size: 20px;
@@ -448,7 +448,7 @@ img {
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%);
-  background-image: url(https://h5.boqiicdn.com/huarun/player.png);
+  background-image: url(../../images/part01/player.png);
 }
 
 .slick-slider {
@@ -498,7 +498,7 @@ img {
 .prev {
   left: 0px;
   top: 50%;
-  background: url(https://h5.boqiicdn.com/huarun/left-arrow.png);
+  background: url(../../images/part01/left-arrow.png);
   transform: translateY(-50%);
 }
 
@@ -507,7 +507,7 @@ img {
   top: 50%;
   width: 30px;
   height: 30px;
-  background: url(https://h5.boqiicdn.com/huarun/right-arrow.png);
+  background: url(../../images/part01/right-arrow.png);
   background-size: cover;
   transform: translateY(-50%);
 }
@@ -562,7 +562,7 @@ overflow: auto;
 #close{
   width: 32px;
   height: 32px;
-  background: url(https://h5.boqiicdn.com/close-btn.png);
+  background: url(../../images/part01/close-btn.png);
   background-size: cover;
   position: absolute;
   right: 0px;

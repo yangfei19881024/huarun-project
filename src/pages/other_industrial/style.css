@@ -35,7 +35,7 @@
 			height: 100%;
 			width: 100%;
 			border-left: none;
-			background: url(http://h5.boqiicdn.com/sfq_bg_deep.jpg);
+			background: url(../../images/part05/sfq_bg_deep.jpg);
 			background-size: cover;
 			background-repeat: no-repeat;
 			position: relative;
@@ -43,7 +43,7 @@
 		}
 		.outer-bg{
 			position: absolute;
-			background: url(http://h5.boqiicdn.com/sfq_bg.png);
+			background: url(../../images/part05/sfq_bg.png);
 			left: 0;
 			right: 0;
 			top: 0;
@@ -60,7 +60,7 @@
 			border-left: 1px solid #cfc5aa;
 		}
 		.side-bar-info:hover {
-			background: url(https://h5.boqiicdn.com/hr/tw-bg-v3.png);
+			background: url(../../images/part05/tw-bg-v3.png);
 		}
 		.side-bar-info:hover .word{
 			color: #fff;
@@ -210,7 +210,7 @@
 			top: 290px;
 			width: 32px;
 			height: 32px;
-			background: url(https://h5.boqiicdn.com/hr/left-arrow.png);
+			background: url(../../images/part05/left-arrow.png);
 			background-size: contain;
 			text-indent: -999999px;
 			cursor: pointer;
@@ -221,7 +221,7 @@
 			top: 290px;
 			width: 32px;
 			height: 32px;
-			background: url(https://h5.boqiicdn.com/hr/right-arrow.png);
+			background: url(../../images/part05/right-arrow.png);
 			background-size: contain;
 			text-indent: -999999px;
 			cursor: pointer;
@@ -265,8 +265,9 @@
 			right: 20px;
 			width: 24px;
 			height: 16px;
-			background: url(https://h5.boqiicdn.com/hr/back.png);
-			background-size: cover;
+			background: url(../../images/double-arrow.png);
+			background-size: contain;
+			background-repeat: no-repeat;
 			cursor: pointer;
 			display: none;
 		}
@@ -282,7 +283,7 @@
 			left: 50%;
 			margin-top: -20px;
 			margin-left: -25px;
-			background: url(https://h5.boqiicdn.com/hr/mouse1.png);
+			background: url(../../images/part05/mouse1.png);
 			background-size: contain;
 			background-repeat: no-repeat;
 			width: 50px;
