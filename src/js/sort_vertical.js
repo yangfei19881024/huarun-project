@@ -78,7 +78,7 @@ sort_vertical.prototype.openThumbnail = function(na, pnt){
 	 
 	 this.setThumbnail();
 	 
-	 $("#siteNavi, #houseName").fadeOut(300);
+	//  $("#siteNavi, #houseName").fadeOut(300);
 	 // $("#sortVertical").show();
 	 
 	 $('.brand-info').show()
@@ -90,7 +90,7 @@ sort_vertical.prototype.openThumbnail = function(na, pnt){
 	 $('.brand-left img').attr('src', na.image)
 	 $('.brand-text').text(na.desc)
 
-	 $("#sortVertical .return").fadeIn(300);
+	//  $("#sortVertical .return").fadeIn(300);
 	 this.setThumUL_LI();
 	 
 	 //サークルの、選択されたサムネを隠す
@@ -409,7 +409,7 @@ sort_vertical.prototype.clickReturnBtn = function(){
 				 $("#sortVertical").hide();
 				 c3dShowCheckMark(my.hData.dre);
 				 my.resetProperty();
-				 $("#siteNavi, #houseName").fadeIn(300);
+				//  $("#siteNavi, #houseName").fadeIn(300);
 				 
 				 //サークルのセンターサムネを表示
 				 showChoicedThumbnail();
@@ -432,7 +432,7 @@ sort_vertical.prototype.clearThum_forViewPhoto = function(){
  $("#sortVertical").hide();
  c3dShowCheckMark(this.hData.dre);
  this.resetProperty();
- $("#siteNavi, #houseName").fadeIn(300);
+//  $("#siteNavi, #houseName").fadeIn(300);
  
  //サークルのセンターサムネを表示
  setTimeout(function(){

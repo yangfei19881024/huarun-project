@@ -640,13 +640,13 @@ function showHouseName(){
 			}
 		}
 	}
-	$("#houseName h2 span").text(choiceHouseData.name);
-	$("#houseName .year").text(choiceHouseData.year);
-	if(choiceHouseData.new){
-		$("#houseName h2 img").css("display","inline");
-	}else{
-		$("#houseName h2 img").css("display","none");
-	}
+	// $("#houseName h2 span").text(choiceHouseData.name);
+	// $("#houseName .year").text(choiceHouseData.year);
+	// if(choiceHouseData.new){
+	// 	$("#houseName h2 img").css("display","inline");
+	// }else{
+	// 	$("#houseName h2 img").css("display","none");
+	// }
 }
 
 //circleがスワイプされて選択状態解除時
@@ -732,7 +732,7 @@ function setClickEventChoiceBox(){
 				var objs = ray.intersectObjects( boxArray );*/
 				// SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
 				// 交差していた場合の処理
-				if (checkHitBox(ev,"end",choiceBoxObj) && Math.abs(c3dSwipEndMoveR)<0.001 &&  $("#houseName").css("display")=="block"){
+				if (checkHitBox(ev,"end",choiceBoxObj) && Math.abs(c3dSwipEndMoveR)<0.001 && $('#houseName').css('display') == 'block'){
 					// c3dMouseActLockFlag = true;
 					SORT_VERTICAL.openThumbnail(choiceBoxObj, getScreenPoint(choiceBoxObj));
 					// if(viewDataType=="space"/* && SORT_VERTICAL.openStandbyFlag*/){

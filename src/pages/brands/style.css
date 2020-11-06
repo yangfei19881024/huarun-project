@@ -139,8 +139,6 @@ body {
   width: 165px;
   height: 60px;
   line-height: 45px;
-  z-index: 8888;
-  
   background: url(https://h5.boqiicdn.com/hr/search_bar.png);
   background-size: contain;
   background-repeat: no-repeat;
