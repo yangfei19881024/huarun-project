@@ -1,4 +1,8 @@
 .video-page{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../images/video/bg.png);
+  background-size: cover;
   overflow: hidden;
 }
 .video-container{
@@ -6,6 +10,25 @@
   height: 100%;
   /* padding-top: 85px; */
   float: left;
+  
+}
+.left-bg{
+  width: 45%;
+  height: 450px;
+  position: absolute;
+  background-image: url(../../images/video/left_bg.png);
+  background-size: contain;
+  top: 30px;
+  left: 15px;
+}
+.right-bg{
+  /* width: 414px;
+  height: 283px;
+  position: absolute;
+  background-image: url(../../images/video/right_bg.png);
+  background-size: contain;
+  top: 0;
+  right: 0; */
 }
 .video-menu-title-con{
   padding-left: 26px;
@@ -14,9 +37,10 @@
   width: 27%;
   float: right;
   height: 100%;
-  
+  position: relative;
   padding-top: 85px;
-  border-left: 1px solid #d1d1d1;
+  border-left: 1px solid #aea496;
+  background: linear-gradient(to right, #d8d8cd, #a6a395);
 }
 
 .video-menu-inner{
@@ -38,42 +62,59 @@
 #dplayer{
   width: 766px;
   height: 527px;
-  
   border-radius: 20px;
-  
 }
 
 .video-menu-title{
   font-weight: bold;
-  font-size: 24px;
+  font-size: 30px;
   color: #7B6E4E;
-
+  letter-spacing: 5px;
+  
 }
 
 .video-menu-subtitle{
   font-size: 20px;
   color: #7B6E4E;
   margin-top: 10px;
+  font-family: 'didot';
 }
 .video-menu-title-con{
-  border-bottom: 1px solid #d1d1d1;
+  border-bottom: 1px solid #aea496;
   padding-bottom: 20px;;
 }
 .video-menu-item-con{
-  padding: 20px 0;
-  border-bottom: 1px solid #d1d1d1;
+  /* padding: 20px 0; */
+  border-bottom: 1px solid #aea496;
 }
 .video-menu-item{
   padding: 13px 0 13px 26px;
-  overflow: hidden;
-  
+  /* overflow: hidden; */
+  height: 90px;
+  position: relative;
   cursor: pointer;
 }
+.video-menu-item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .video-menu-item.active{
-  background: #b2a070;
+  background: #c2b48d;
+}
+.video-menu-item.active::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 23px;
+  height: 26px;
+  background: url(../../images/video/arrow.png);
+  background-size: cover;
+  top: 28px;
+  left: -52px;
 }
 .video-menu-item.active p {
-  color: #FFFBCC;
+  color: #866a26;
 }
 .video-menu-item > div{
   float: left;
@@ -85,11 +126,12 @@
 }
 
 .video-item-title{
-  font-size: 20px;
-  color: #655a46;
+  font-size: 24px;
+  color: #948359;
   font-weight: 400;
 }
 .video-item-subtitle{
   font-size: 16px;
   color: #8f8b7f;
+  font-family: didot;
 }
